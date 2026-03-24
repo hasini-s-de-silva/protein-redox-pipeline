@@ -53,6 +53,8 @@ cd protein-redox-pipeline
 Install dependencies:
 pip install -r requirements.txt
 
+---
+
 ## ⚙️ How to Run
 
 ### Step 1: Run pipeline
@@ -73,12 +75,16 @@ sample	redox_potential	reorganisation_energy	electronic_coupling
 protein1	-0.12	0.45	0.003
 protein2	-0.08	0.39	0.005
 
+---
+
 ## 🧠 Applications
 - Protein engineering and redox tuning
 - Electron transfer modelling in multi-heme systems
 - Bioelectronic material design
 - Computational biophysics workflows
 - AI-driven drug discovery and protein design pipelines
+
+---
 
 ## ⚠️ License & Attribution
 This project builds upon BioDC (Version 2.2), developed by Matthew J. Guberman-Pfeffer.
@@ -90,6 +96,7 @@ A copy of the original license is included in this repository.
 
 Modifications, pipeline development, and analysis scripts in this project are my own.
 
+---
 
 ## 📚 Original BioDC Documentation
 
