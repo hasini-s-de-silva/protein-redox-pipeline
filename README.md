@@ -28,6 +28,8 @@ This project enables systematic evaluation of redox potentials, electron transfe
 
 ---
 ## 📁 Project Structure
+
+```text
 protein-redox-pipeline/
 ├── src/
 │ ├── run_pipeline.py
@@ -37,8 +39,8 @@ protein-redox-pipeline/
 ├── examples/
 ├── results/
 ├── README.md
-├── LICENSE
-└── .gitignore
+└── LICENCE
+```
 
 ---
 
