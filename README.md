@@ -1,122 +1,58 @@
-# 🧬 Protein Redox Analysis Pipeline (BioDC-based)
 
-> ⚡ Designed for scalable redox analysis across protein variants in computational protein engineering workflows.
+# BioDC (Version 2.0)
+## A Python program that automates and accelerates the computation of redox potentials, cooperativities, and conductivities in (polymeric) multi-heme cytochromes.
 
-A computational pipeline for large-scale analysis of redox properties in protein systems, extending BioDC with automated batch processing and structured result extraction.
+### What does this project do?
 
-This project enables systematic evaluation of redox potentials, electron transfer energetics, and coupling across multiple protein variants — supporting protein engineering, bioelectronics, and computational biophysics applications.
+BioDC has four main funcitons:
 
----
+(1) Assist in the preparation of proteins containing one or more heme groups for molecular dynamics with the AMBER forcefield. The heme can be b- or c-type and be His-His or His-Met ligated. 
 
-## 🚀 Key Features
+(2) Estimate the reaction and reorganizaiton free energies, as well as electronic couplings for heme-to-heme electron transfer. 
 
-- ⚡ Automated execution of BioDC across multiple protein inputs  
-- 🔄 Batch processing pipeline for scalable analysis  
-- 📊 Structured extraction of redox potential, reorganisation energy, and electronic coupling  
-- 📁 Organised output directories and reproducible workflows  
-- 🧠 Designed for HPC and large dataset processing  
+(3) Compute redox cooperaitivites (i.e., how much the oxidaiton of one heme influences the redox potential of another heme in the same system).
 
----
+(4) Compute redox cooperativiity according to a single particle charge diffusion model or a multi-particle stead-state flux model. 
 
-## 🧬 My Contribution
+### Relevant References
 
-- Adapted and extended parts of the BioDC workflow to better support protein structure inputs, with a focus on haem-containing (heme) proteins and their structural preparation
-- Built a pipeline (`run_pipeline.py`) to automate BioDC execution across multiple protein systems  
-- Developed analysis scripts (`analysis.py`) to extract key redox and electron transfer metrics  
-- Designed a reproducible workflow for structured computational experiments  
-- Enabled comparative analysis across protein variants  
+The BioDC workflow and the implemented methodologies are descirbed in the following publications.
 
----
-## 📁 Project Structure
-protein-redox-pipeline/
-├── src/
-│ ├── run_pipeline.py
-│ ├── analysis.py
-├── biodc/ # Updated BioDC code (MIT Licensed)
-├── configs/
-├── examples/
-├── results/
-├── README.md
-├── LICENSE
-└── .gitignore
+(1) Derrida, B. Velocity and diffusion constant of a periodic one-dimensional hopping model. *J. Stat. Phys.* **1983**, 31, 433-450.
 
----
+(2) Guberman-Pfeffer, M. J. Assessing Thermal Response of Redox Conduction for Anti-Arrhenius Kinetics in a Microbial Cytochrome Nanowire. *J. Phys. Chem. B* **2022**, 126 (48), 10083-10097. DOI: 10.1021/acs.jpcb.2c06822  From NLM Medline.
 
-## ⚙️ Installation
+(3) Jansson, F. Charge transport in disordered materials: simulations, theory, and numerical modeling of hopping transport and electron-hole recombination. Åbo Akademi University, 2011. https://urn.fi/URN:NBN:fi-fe201311277464.
 
-Clone the repository:
+(4) Nenashev, A.; Jansson, F.; Baranovskii, S.; Österbacka, R.; Dvurechenskii, A.; Gebhard, F. Effect of electric field on diffusion in disordered materials. I. One-dimensional hopping transport. *Physl. Rev. B* **2010**, 81 (11), 115203.
 
-```bash
-git clone https://github.com/your-username/protein-redox-pipeline.git
-cd protein-redox-pipeline
+(5) Breuer, M.; Rosso, K. M.; Blumberger, J. Electron flow in multiheme bacterial cytochromes is a balancing act between heme electronic interaction and redox potentials. *Proc. Natl. Acad. Sci. U. S. A.* **2014**, 111 (2), 611-616. DOI: 10.1073/pnas.1316156111.
 
-Install dependencies:
-pip install -r requirements.txt
-```
----
+(6) Jiang, X.; Futera, Z.; Ali, M. E.; Gajdos, F.; von Rudorff, G. F.; Carof, A.; Breuer, M.; Blumberger, J. Cysteine Linkages Accelerate Electron Flow through Tetra-Heme Protein STC. *J. Am. Chem. Soc.* **2017**, 139 (48), 17237-17240. DOI: 10.1021/jacs.7b08831.
 
-## ⚙️ How to Run
+(7) Jiang, X.; van Wonderen, J. H.; Butt, J. N.; Edwards, M. J.; Clarke, T. A.; Blumberger, J. Which Multi-Heme Protein Complex Transfers Electrons More Efficiently? Comparing MtrCAB from Shewanella with OmcS from Geobacter. *J. Phys. Chem. Lett.* **2020**, 11 (21), 9421-9425. DOI: 10.1021/acs.jpclett.0c02842.
 
-### Step 1: Run pipeline
+### Contributors
+Contributions to the BioDC project are most gratefully appreciated. I wish to acknowledge the following researchers and their contributions: 
 
-python src/run_pipeline.py \
-  --biodc-script biodc/V2.2/BioDCv2.py \
-  --input-dir examples \
-  --template-input configs/input.txt \
-  --output-root results
+- Caleb L. Herron enabled BioDC to run either in interactive mode, where it records selected settings in a log file for reproducibility, or batch mode, where BioDC reads all needed settings from input.txt and asks for any that are missing.
 
-### Step 2: Analyse results
-python src/analysis.py \
-  --results-root results/runs_YYYYMMDD_HHMMSS \
-  --output-csv results/aggregated_results.csv
+- Dr. Fredrik Jansson provided the Python implementation of the Derrida formula.
 
-### 📊 Example Output
-sample	redox_potential	reorganisation_energy	electronic_coupling
-protein1	-0.12	0.45	0.003
-protein2	-0.08	0.39	0.005
+- Prof. Jochen Blumberger and Dr. Xiuyun Jiang provided the Python implementation of the steady-state flux kinetic model.
 
----
+### How do I get started?
 
-## 🧠 Applications
-- Protein engineering and redox tuning
-- Electron transfer modelling in multi-heme systems
-- Bioelectronic material design
-- Computational biophysics workflows
-- AI-driven drug discovery and protein design pipelines
+Several examples are provided. 
 
----
 
-## ⚠️ License & Attribution
+## License & Attribution
+
 This project builds upon BioDC (Version 2.2), developed by Matthew J. Guberman-Pfeffer.
 
 Copyright (c) 2024 Matthew J. Guberman-Pfeffer
 
-BioDC is licensed under the MIT License.
+BioDC is licensed under the MIT License.  
 A copy of the original license is included in this repository.
 
-Modifications, pipeline development, and analysis scripts in this project are my own.
-
----
-
-## 📚 Original BioDC Documentation
-
-BioDC is a Python program that automates and accelerates the computation of redox potentials, cooperativities, and conductivities in (polymeric) multi-heme cytochromes.
-
-### Core Capabilities
-- Preparation of proteins containing one or more heme groups for molecular dynamics with the AMBER forcefield
-- Estimation of reaction and reorganisation free energies and electronic couplings for electron transfer
-- Computation of redox cooperativity across heme groups
-- Modelling charge transport using diffusion and steady-state flux models
-
-### References
-Derrida, B. J. Stat. Phys. (1983)
-Guberman-Pfeffer, M. J. J. Phys. Chem. B (2022)
-Jansson, F. (2011)
-Nenashev et al. Phys. Rev. B (2010)
-Breuer et al. PNAS (2014)
-Jiang et al. JACS (2017)
-Jiang et al. J. Phys. Chem. Lett. (2020)
-
-
-
-
+Modifications and extensions in this project are my own.
