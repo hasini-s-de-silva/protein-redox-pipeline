@@ -10,11 +10,11 @@ This project enables systematic evaluation of redox potentials, electron transfe
 
 ## Key Features
 
-- ⚡ Automated execution of BioDC across multiple protein inputs  
-- 🔄 Batch processing pipeline for scalable analysis  
-- 📊 Structured extraction of redox potential, reorganisation energy, and electronic coupling  
-- 📁 Organised output directories and reproducible workflows  
-- 🧠 Designed for HPC and large dataset processing  
+-  Automated execution of BioDC across multiple protein inputs  
+-  Batch processing pipeline for scalable analysis  
+-  Structured extraction of redox potential, reorganisation energy, and electronic coupling  
+-  Organised output directories and reproducible workflows  
+-  Designed for HPC and large dataset processing  
 
 ---
 
