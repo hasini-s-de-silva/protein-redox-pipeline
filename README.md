@@ -1,6 +1,6 @@
 # Protein Redox Analysis Pipeline (BioDC-based)
 
-> ⚡ Designed for scalable redox analysis across protein variants in computational protein engineering workflows.
+>  Designed for scalable redox analysis across protein variants in computational protein engineering workflows.
 
 A computational pipeline for large-scale analysis of redox properties in protein systems, extending BioDC with automated batch processing and structured result extraction.
 
