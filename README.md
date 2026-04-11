@@ -1,4 +1,4 @@
-# 🧬 Protein Redox Analysis Pipeline (BioDC-based)
+# Protein Redox Analysis Pipeline (BioDC-based)
 
 > ⚡ Designed for scalable redox analysis across protein variants in computational protein engineering workflows.
 
@@ -8,7 +8,7 @@ This project enables systematic evaluation of redox potentials, electron transfe
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - ⚡ Automated execution of BioDC across multiple protein inputs  
 - 🔄 Batch processing pipeline for scalable analysis  
@@ -18,7 +18,7 @@ This project enables systematic evaluation of redox potentials, electron transfe
 
 ---
 
-## 🧬 My Contribution
+## My Contribution
 
 - Adapted and extended parts of the BioDC workflow to better support protein structure inputs, with a focus on haem-containing (heme) proteins and their structural preparation
 - Built a pipeline (`run_pipeline.py`) to automate BioDC execution across multiple protein systems  
@@ -27,7 +27,7 @@ This project enables systematic evaluation of redox potentials, electron transfe
 - Enabled comparative analysis across protein variants  
 
 ---
-## 📁 Project Structure
+## Project Structure
 
 ```text
 protein-redox-pipeline/
@@ -44,7 +44,7 @@ protein-redox-pipeline/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ```
 ---
 
-## ⚙️ How to Run
+## How to Run
 
 ### Step 1: Run pipeline
 
@@ -72,14 +72,14 @@ python src/analysis.py \
   --results-root results/runs_YYYYMMDD_HHMMSS \
   --output-csv results/aggregated_results.csv
 
-### 📊 Example Output
+### Example Output
 sample	redox_potential	reorganisation_energy	electronic_coupling
 protein1	-0.12	0.45	0.003
 protein2	-0.08	0.39	0.005
 
 ---
 
-## 🧠 Applications
+## Applications
 - Protein engineering and redox tuning
 - Electron transfer modelling in multi-heme systems
 - Bioelectronic material design
@@ -88,7 +88,7 @@ protein2	-0.08	0.39	0.005
 
 ---
 
-## ⚠️ License & Attribution
+## License & Attribution
 This project builds upon BioDC (Version 2.2), developed by Matthew J. Guberman-Pfeffer.
 
 Copyright (c) 2024 Matthew J. Guberman-Pfeffer
@@ -100,7 +100,7 @@ Modifications, pipeline development, and analysis scripts in this project are my
 
 ---
 
-## 📚 Original BioDC Documentation
+## Original BioDC Documentation
 
 BioDC is a Python program that automates and accelerates the computation of redox potentials, cooperativities, and conductivities in (polymeric) multi-heme cytochromes.
 
